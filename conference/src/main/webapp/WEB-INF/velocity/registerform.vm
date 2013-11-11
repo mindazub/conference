@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Registration </title>
+        #parse("blocks/head.vm")
+        
+        </style>
+    </head>
+    <body>
+        <center>
+        <form method="get" action="/html/index.html">
+		
+        <form name="registrationForm">
+            <fieldset>
+                <legend>Registration</legend>
+                <label>Name:<input type="text" name="username"/><span>*</span></label>
+                <label>Phone Number:<input type="tel" name="phone"/><span>*</span></label>
+				<label>Password:<input type="tel" name="pass"/><span>*</span></label>
+				<label>Re-enter password:<input type="tel" name="pass"/><span>*</span></label>
+                <label>Email:<input type="email" name="email"/><span>*</span></label>
+                <label>Street:<input type="text" name="street"/><span>*</span></label>
+                <label>City: <input type="text" name="street"/> <span>*</span></label>
+                <input  type="reset" class="resetButton"/>
+                <input  type="submit" value="Login" class="submitButton"/></br>
+                <a href="/conference/list">Unregistered User</a>
+            </fieldset>
+        </form>
+        </center>
+    </body>

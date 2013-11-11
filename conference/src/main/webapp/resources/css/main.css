@@ -1,5 +1,5 @@
 form {
-    width: 200px;
+    width: 430px;
 }
 
 form label {
@@ -7,22 +7,81 @@ form label {
 }
 
 #filters {
-    width: 150px;
+    width: 400px;
 }
 
 .formGroup {
     margin-top: 10px;
 }
 
-.conferenceList {
+.conference_List {
     border: 1px solid #cccccc;
+    width:400px;
 }
 
 .conferenceList th {
-    text-align: left;
+    text-align: right;
 }
 
 .conferenceList td,
 .conferenceList th {
     border: 1px solid #cccccc;
 }
+
+<!---- login formai ------>
+
+
+h2 {letter-spacing: 10px; font-size: .3in;
+background-color: rgb(0,0,100); color: lightblue;
+text-transform: uppercase; width: 400px}
+span {color: red}
+legend {font-variant: small-caps; font-weight: bold}
+fieldset {width: 370px; font-family: Arial; 
+background-color: lightblue; color: rgb(0,0,100)}
+            
+
+label {display: block; position: relative; line-height: 2;
+            
+	margin: 10px 0px}
+            
+.text {position: absolute; margin-left: 30px; width: 10em;
+            left: 80px}
+.links { font-size: .1in}
+
+<!---- login formai PABAIGA------>
+
+
+
+<!---- Conference list formai AKORDEONAS------>
+#wrap{
+			margin: 150px auto;
+			width: 400px;
+		}
+
+		#accordion{
+			width: 350px;
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+
+		#accordion h2{
+			font-size: 12pt;
+			margin: 0px;
+			padding: 10px;
+			background: #cccc;
+			border-bottom: 1px solid #fff;
+		}
+		#accordion li div.content{
+			display: none;
+			padding: 8px;
+			background: #fff;
+			border: 1px solid #ddd;
+		}
+
+		#accordion li:hover div.content{
+			display: inherit;
+		}
+		
+<!---- Conference list formai PABAIGA------>
+

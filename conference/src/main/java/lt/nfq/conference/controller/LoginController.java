@@ -9,11 +9,21 @@ public class LoginController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String loginForm() {
-        return "login";
+        return "conferencelist";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login() {
-        return "redirect:/conference/list";
+//    @RequestMapping(value = "/login", method = RequestMethod.GET)
+//    public String login() {
+//        return "loginma";
+//    }
+    
+    @RequestMapping(value = "/registerform", method = RequestMethod.GET)
+    public String register() {
+        return "registerform";
+    }
+    
+    @RequestMapping(value = "/registerform", method = RequestMethod.POST)
+    public String registerForm() {
+        return "registerform";
     }
 }

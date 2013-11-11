@@ -1,13 +1,45 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>Conference list</title>
+        <title> CONFERENCE LIST - MAIN</title>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.min.css" type="text/css">
         #parse("blocks/head.vm")
     </head>
     <body>
         <center>
-        <form method="post" action="" id="filters">
+        <h2> Conference Page</h2>
+                
+        <!---<a href="/conference_list">Mindaugas Azubalis Logged In</a>
+        <a href="/conference_list">Log Out</a></br> --->
+        
+       <!--- <div class="btn">
+  			<input type="button" value="TELL ME MORE" onClick="document.location.reload(true)">
+ 		</div>--->
+        
+        <!-- Login ir password ir naudoti uz pagrindini -->
+		<fieldset>
+                <legend>User login:</legend>
+                <div class="formGroup">
+                    <label for="user">Username:</label>
+                    <input type="text" id="user" name="user"/>
+                </div>
+
+                <div class="formGroup">
+                    <label for="pass">Password:</label>
+                    <input type="password" id="pass" name="password"/>
+                </div>
+                <div class="formGroup">
+                    <input type="submit" value="Login" id="login">
+                    <input type="submit" value="Register" id="register"></br>
+                 <div class="links">	
+                 	<a href="/conference/list">Unregistered User</a>
+                 </div>	
+                </div>
+            </fieldset>
+			
+		<!-- Pridejimo pabAiga -->
+		
+		<!---FILTRAI, PAIESKA --->
+		<form method="post" action="" id="filters">
             <fieldset>
                 <legend>Search filter</legend>
                 
@@ -31,27 +63,12 @@
                     <input type="reset" value="Reset">
                 </div>
             </fieldset>
-        </form>
+            
+		<!---FILTRAI, PAIESKA ---PABAIGA--->
 		
 		
-		
-        <fieldset>
-            <legend>Conference list:</legend>
-            <div id="conference">
-                #if ($conferenceList)
-                    #parse("conference/items.vm")
-                #end
-            </div>
-        </fieldset>
-        <div id="conferenceForm"></div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-        <script src="/resources/js/list.js"></script>
-        
-        
-        <!----ACORDEONO PRADZIA--->
 		<fieldset>
-                <legend>Conference List - All By Your Search</legend>
+                <legend>Conference List - Recent</legend>
 		
 		<form name="conference_list">
         
@@ -59,16 +76,15 @@
 		<ul id="accordion">
 			
 		<li>
-			<h2>Reikia kad paieskos rezultatus detu cia?</h2>
+			<h2>What this is all about?</h2>
 			<div class="content">
-				Turi buti akordeonas.
+				This is a good conference application. Try to use it and you'll see.
 			</div>
 		</li>
 		<li>
-			<h2>Acordeon technique</h2>
+			<h2>Why do we need to use this?</h2>
 			<div class="content">
-				Na kelios eilutes ir tiek, listina per visu #items.vm ...  todel reikia tiesiog patvarkyti 
-				items, kad butu pagal akordeona...
+				You need it if you are interesting in some topics that are covered there...
 			</div>
 		</li>
 		<li>
@@ -91,12 +107,8 @@
 		</li>
 	</ul>
         </div><!-- wrap -->
-        <a href="/conference/list">Next 50 ...</a>
+        <a href="/conference/list">More ...</a>
         </form>
         </center>
         </fieldset>
-        
-        <!---ACORDEONO PABAIGA--->
-		</center>
     </body>
-</html>
